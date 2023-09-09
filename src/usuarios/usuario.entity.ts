@@ -17,7 +17,7 @@ export class Usuario {
     // Propiedad 'correo' de tipo string, que almacena la dirección de correo electrónico del usuario
     correo: string
 
-    // Propiedad 'telefono' de tipo string, que almacena el número de teléfono del usuario
+    // Propiedad 'telefono' de tipo string, que almacena el número de teléfono del usuanest generate controller productos --no-specrio
     telefono: string
 
     // Propiedad 'direccion' de tipo string, que almacena la dirección del usuario
