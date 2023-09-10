@@ -22,7 +22,7 @@ model Usuario {
 }
 model Rol {
   id Int @id @default(autoincrement())
-  descricion String @unique
+  descripcion String @unique
   usuario Usuario[]
 }
 
@@ -33,7 +33,7 @@ model Rol {
 model Producto {
   id Int @id @default(autoincrement())
   nombre String
-  descricion String @unique
+  descripcion String @unique
   precio Decimal
   stock Int
   catId Int?
@@ -42,7 +42,7 @@ model Producto {
 
 model Categoria {
   id Int @id @default(autoincrement())
-  descricion String @unique
+  descripcion String @unique
   producto Producto[]  
 }
 
