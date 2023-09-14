@@ -12,7 +12,7 @@ export class CreateUsuarioDto {
     ci: number;
 
     // Propiedad 'rol' de tipo string, que representa el rol del usuario que se va a crear (por ejemplo, "administrador" o "usuario")
-    rolId: string;
+    rolId: number;
 
     // Propiedad 'correo' de tipo string, que representa el correo electrónico del usuario que se va a crear
     correo: string;
