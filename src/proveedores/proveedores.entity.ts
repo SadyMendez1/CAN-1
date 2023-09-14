@@ -3,16 +3,16 @@ export class Proveedores {
     // Declaración de propiedades de la clase 'Proveedores'
 
     // Propiedad 'id' de tipo string, que generalmente se utiliza para identificar de manera única a un proveedor
-    idprov: string
+    id: string
 
     // Propiedad 'nombre' de tipo string, que almacena el nombre del proveedor
-    nombre_prov: string
+    nombre: string
 
     // Propiedad 'correo' de tipo string, que almacena la dirección de correo electrónico del proveedor
     correo: string
 
     // Propiedad 'telefono' de tipo string, que almacena el número de teléfono del proveedor
-    telefono: string
+    telefono: number
 
     // Propiedad 'direccion' de tipo string, que almacena la dirección del proveedor
     direccion: string

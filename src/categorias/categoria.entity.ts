@@ -6,10 +6,7 @@ export class Categoria {
     id: string
 
     // Propiedad 'nombre' de tipo string, que almacena el nombre de la categoria
-    nombre: string
-
-    // Propiedad 'imagen' de tipo string, que almacena una imagen de la categoría
-    imagen: string
+    descripcion: string
 }
 
 /** 

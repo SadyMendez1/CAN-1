@@ -26,7 +26,7 @@ export class ProveedoresController {
     createProveedor(@Body() newProveedor: CreateProveedorDto) {
         // Llama al método 'createProveedor' del servicio 'ProveedoresService' pasando el objeto 'newProveedor' como argumento
         return this.proveedoresService.createProveedor(
-            newProveedor.nombre_prov,
+            newProveedor.nombre,
             newProveedor.correo,
             newProveedor.telefono,
             newProveedor.direccion
@@ -34,18 +34,18 @@ export class ProveedoresController {
     }
     
     // Decorador @Delete() para crear una ruta HTTP DELETE en '/proveedores/:idprov'
-    @Delete(':idprov')
+    @Delete(':id')
     // Método 'deleteProveedor' que será ejecutado cuando se haga una solicitud DELETE a una ruta como '/proveedores/123', donde '123' es el ID proporcionado en la URL
-    deleteProveedor(@Param('idprov') idprov: string){
+    deleteProveedor(@Param('id') id: string){
         // Llama al método 'deleteProveedores' del servicio 'proveedoresService' pasando el 'idprov' como argumento
-        this.proveedoresService.deleteProveedores(idprov);
+        this.proveedoresService.deleteProveedores(id);
     }
 
     // Decorador @Patch() para crear una ruta HTTP PATCH en '/proveedores/:idprov'
-    @Patch(':idprov')
+    @Patch(':id')
     // Método 'updateProveedor' que será ejecutado cuando se haga una solicitud PATCH a una ruta como '/proveedores/123', donde '123' es el ID proporcionado en la URL
-    updateProveedor(@Param('idprov') idprov: string, @Body() updatedFields: UpdateProveedorDto){
+    updateProveedor(@Param('id') id: string, @Body() updatedFields: UpdateProveedorDto){
         // Llama al método 'updateProveedor' del servicio 'proveedoresService' pasando el 'id' y 'updatedFields' como argumentos
-        return this.proveedoresService.updateProveedor(idprov, updatedFields);
+        return this.proveedoresService.updateProveedor(id, updatedFields);
     }
 }

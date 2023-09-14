@@ -8,39 +8,41 @@ export class ProductosService {
 
     private productos: Producto[]=[
         {
-            idprod: '1',
+            id: '1',
+            nombre: "canasta",
             descripcion:'canastas',
-            proveedor: 'c12',
             precio: '1000',
             stock: '20',
-            imagen: 'img/jpeg',
+            catId: 'abc',
+            proveId: 'def'
         },
     ];
     getAllProductos(){
         return this.productos;
     }
-    createProducto(descripcion: string, proveedor: string, precio: string, stock: string, imagen:string){
+    createProducto(nombre: string, descripcion: string, precio: string, stock: string, catId:string, proveId:string){
         const producto= {
-            idprod: v4(),
+            id: v4(),
+            nombre: "canasta",
             descripcion:'canastas',
-            proveedor: 'c12',
             precio: '1000',
             stock: '20',
-            imagen: 'img/jpeg',
+            catId: 'abc',
+            proveId: 'def'
         };
         this.productos.push(producto);
         return producto;
     }
-    getProductoById(idprod: string): Producto{
-        return this.productos.find(producto => producto.idprod === idprod)
+    getProductoById(id: string): Producto{
+        return this.productos.find(producto => producto.id === id)
     }
-    updateProductos(idprod: string, updatedFields: UpdateProductoDto): Producto{
-        const producto = this.getProductoById(idprod);
+    updateProductos(id: string, updatedFields: UpdateProductoDto): Producto{
+        const producto = this.getProductoById(id);
         const newProducto = Object.assign(producto, updatedFields);
-        this.productos.map(producto => producto.idprod === idprod ? newProducto: producto);
+        this.productos.map(producto => producto.id === id ? newProducto: producto);
         return newProducto;
     }
-    deleteProductos(idprod: string){
-        this.productos = this.productos.filter(producto => producto.idprod !== idprod);
+    deleteProductos(id: string){
+        this.productos = this.productos.filter(producto => producto.id !== id);
     }
 }

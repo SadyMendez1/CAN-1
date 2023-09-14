@@ -7,18 +7,16 @@ export class CategoriasService {
     private categorias: Categoria[]=[
         {
             id: '1',
-            nombre:'Admin',
-            imagen:'1111111',
+            descripcion:'Admin'
         },
     ];
     getAllCategorias(){
         return this.categorias;
     }
-    createCategoria(nombre: string, imagen: string){
+    createCategoria(descripcion: string){
         const categoria= {
             id: v4(),
-            nombre:'Admin',
-            imagen: 'SA',
+            descripcion: 'SA'
         };
         this.categorias.push(categoria);
         return categoria;

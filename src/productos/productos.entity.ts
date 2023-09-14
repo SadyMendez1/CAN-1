@@ -3,13 +3,12 @@ export class Producto {
     // Declaración de propiedades de la clase 'Usuario'
 
    // Propiedad 'idprod' de tipo string, que generalmente se utiliza para identificar de manera única a un producto
-   idprod: string
+   id: string
+
+   nombre: string
 
    // Propiedad 'nombre' de tipo string, que almacena el nombre del producto
    descripcion: string
-
-   // Propiedad 'proveedor' de tipo string, que almacena el proveedor del producto
-   proveedor: string
 
    // Propiedad 'precio' de tipo string, que almacena el precio del producto
    precio: string
@@ -17,8 +16,9 @@ export class Producto {
    // Propiedad 'stock' de tipo string, que almacena el stock del producto
    stock: string
 
-   // Propiedad 'imagen' de tipo string, que almacena la imagen del producto
-   imagen: string
+   catId: string
+
+   proveId: string
 }
 
 /** 

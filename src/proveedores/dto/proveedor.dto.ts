@@ -3,13 +3,13 @@ export class CreateProveedorDto {
     // Declaración de propiedades de la clase 'CreateProveedorDto'
 
     // Propiedad 'nombre_prov' de tipo string, que representa el nombre del proveedor que se va a crear
-    nombre_prov: string;
+    nombre: string;
 
     // Propiedad 'correo' de tipo string, que representa el correo electrónico del proveedor que se va a crear
     correo: string;
 
     // Propiedad 'telefono' de tipo string, que representa el número de teléfono del proveedor que se va a crear
-    telefono: string;
+    telefono: number;
 
     // Propiedad 'direccion' de tipo string, que representa la dirección del proveedor que se va a crear
     direccion: string;
@@ -19,13 +19,13 @@ export class UpdateProveedorDto {
     // Declaración de propiedades de la clase 'UpdateProveedorDto'
 
     // Propiedad 'nombre_prov' opcional de tipo string, que representa el nuevo nombre que se puede actualizar en el proveedor
-    nombre_prov?: string;
+    nombre?: string;
 
     // Propiedad 'correo' opcional de tipo string, que representa el nuevo correo electrónico que se puede actualizar en el proveedor
     correo?: string;
 
     // Propiedad 'telefono' opcional de tipo string, que representa el nuevo número de teléfono que se puede actualizar en el proveedor
-    telefono?: string;
+    telefono?: number;
 
     // Propiedad 'direccion' opcional de tipo string, que representa la nueva dirección que se puede actualizar en el proveedor
     direccion?: string;

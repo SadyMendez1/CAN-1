@@ -26,8 +26,7 @@ export class CategoriasController {
     createCategoria(@Body() newCategoria: CreateCategoriaDto) {
         // Llama al método 'createCategoria' del servicio 'CategoriasService' pasando el objeto 'newCategoria' como argumento
         return this.categoriasService.createCategoria(
-            newCategoria.nombre,
-            newCategoria.imagen,
+            newCategoria.descripcion
         );
     }
     

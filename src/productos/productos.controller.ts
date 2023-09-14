@@ -26,27 +26,28 @@ export class ProductosController {
     createProducto(@Body() newProducto: CreateProductoDto) {
         // Llama al método 'createProducto' del servicio 'ProductosService' pasando el objeto 'newProducto' como argumento
         return this.productosService.createProducto(
+            newProducto.nombre,
             newProducto.descripcion,
-            newProducto.proveedor,
             newProducto.precio,
             newProducto.stock,
-            newProducto.imagen,
+            newProducto.catId,
+            newProducto.proveId,
         );
     }
     
     // Decorador @Delete() para crear una ruta HTTP DELETE en '/productos/:id'
-    @Delete(':idprod')
+    @Delete(':id')
     // Método 'deleteProducto' que será ejecutado cuando se haga una solicitud DELETE a una ruta como '/productos/123', donde '123' es el ID proporcionado en la URL
-    deleteProducto(@Param('idprod') idprod: string){
+    deleteProducto(@Param('id') id: string){
         // Llama al método 'deleteProductos' del servicio 'ProductosService' pasando el 'idprod' como argumento
-        this.productosService.deleteProductos(idprod);
+        this.productosService.deleteProductos(id);
     }
 
     // Decorador @Patch() para crear una ruta HTTP PATCH en '/usuarios/:id'
-    @Patch(':idprod')
+    @Patch(':id')
     // Método 'updateUsuario' que será ejecutado cuando se haga una solicitud PATCH a una ruta como '/usuarios/123', donde '123' es el ID proporcionado en la URL
-    updateProducto(@Param('idprod') idprod: string, @Body() updatedFields: UpdateProductoDto){
+    updateProducto(@Param('id') id: string, @Body() updatedFields: UpdateProductoDto){
         // Llama al método 'updateProductos' del servicio 'ProductosService' pasando el 'idprod' y 'updatedFields' como argumentos
-        return this.productosService.updateProductos(idprod, updatedFields);
+        return this.productosService.updateProductos(id, updatedFields);
     }
 }
