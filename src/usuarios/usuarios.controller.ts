@@ -23,7 +23,7 @@ export class UsuariosController {
             const result = await this.usuarioService.getAllUsuarios();
             return response.status(200).json({
                 status: 'Correcto',
-                message: 'Datos correctamente recuperado',
+                message: 'Datos correctamente recuperados',
                 result: result
             })
         } catch (error) {

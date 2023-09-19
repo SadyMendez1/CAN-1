@@ -11,6 +11,7 @@ CREATE TABLE `Usuario` (
     `direccion` VARCHAR(191) NOT NULL,
 
     UNIQUE INDEX `Usuario_ci_key`(`ci`),
+    UNIQUE INDEX `Usuario_correo_key`(`correo`),
     UNIQUE INDEX `Usuario_telefono_key`(`telefono`),
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -18,9 +19,9 @@ CREATE TABLE `Usuario` (
 -- CreateTable
 CREATE TABLE `Rol` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
-    `descricion` VARCHAR(255) NOT NULL,
+    `descripcion` VARCHAR(255) NOT NULL,
 
-    UNIQUE INDEX `Rol_descricion_key`(`descricion`),
+    UNIQUE INDEX `Rol_descripcion_key`(`descripcion`),
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
@@ -28,7 +29,7 @@ CREATE TABLE `Rol` (
 CREATE TABLE `Producto` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `nombre` VARCHAR(255) NOT NULL,
-    `descricion` VARCHAR(255) NOT NULL,
+    `descripcion` VARCHAR(255) NOT NULL,
     `precio` DECIMAL(65, 30) NOT NULL,
     `stock` INTEGER NOT NULL,
     `catId` INTEGER NULL,
@@ -40,9 +41,9 @@ CREATE TABLE `Producto` (
 -- CreateTable
 CREATE TABLE `Categoria` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
-    `descricion` VARCHAR(255) NOT NULL,
+    `descripcion` VARCHAR(255) NOT NULL,
 
-    UNIQUE INDEX `Categoria_descricion_key`(`descricion`),
+    UNIQUE INDEX `Categoria_descripcion_key`(`descripcion`),
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 

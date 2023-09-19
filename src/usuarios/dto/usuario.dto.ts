@@ -53,7 +53,7 @@ export class UpdateUsuarioDto {
 
     // Propiedad 'direccion' opcional de tipo string, que representa la nueva dirección que se puede actualizar en el usuario
     direccion?: string;
-    
+}
     
 /**
  * En resumen, estos DTOs (Data Transfer Objects) definen la estructura de datos que se 
