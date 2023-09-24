@@ -2,6 +2,7 @@
 import { Module } from '@nestjs/common';
 
 // Importa los módulos y controladores desde sus archivos correspondientes.
+import { AuthModule } from './authentication/auth.module';
 import { CategoriasModule } from './categorias/categorias.module';
 import { ProductosModule } from './productos/productos.module';
 import { ProveedoresModule } from './proveedores/proveedores.module';
@@ -14,7 +15,7 @@ import { UsuariosController } from './usuarios/usuarios.controller';
 // Declara un módulo de NestJS llamado 'AppModule'.
 @Module({
   // Indica los módulos que deben importarse en este módulo.
-  imports: [CategoriasModule, ProductosModule, ProveedoresModule, UsuariosModule],
+  imports: [AuthModule, CategoriasModule, ProductosModule, ProveedoresModule, UsuariosModule],
 
   // Define los controladores que pertenecen a este módulo.
   controllers: [CategoriasController, ProductosController, ProveedoresController, UsuariosController],

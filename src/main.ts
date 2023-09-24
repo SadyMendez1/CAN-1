@@ -9,6 +9,13 @@ async function bootstrap() {
   // Crea una instancia de la aplicación NestJS utilizando el módulo 'AppModule'.
   const app = await NestFactory.create(AppModule);
 
+  const cors= {
+    origin:['http://localhost:3000'],
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS'
+  }
+
+  app.enableCors(cors);
+
   // Escucha en el puerto 3000 para manejar las solicitudes entrantes.
   await app.listen(3000);
 }

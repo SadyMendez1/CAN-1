@@ -6,7 +6,7 @@ import { UsuariosService } from './usuarios.service';
 
 import { Request, Response } from 'express';
 
-import { CreateUsuarioDto, UpdateUsuarioDto } from './dto/usuario.dto';
+//import { CreateUsuarioDto, UpdateUsuarioDto } from './dto/usuario.dto';
 
 // Define un controlador llamado 'UsuariosController' con una ruta base '/usuarios'
 @Controller('usuarios')
@@ -29,7 +29,8 @@ export class UsuariosController {
         } catch (error) {
             return response.status(500).json({
                 status: 'Correcto',
-                message: 'Error de Servidor'
+                message: 'Error de Servidor',
+                error: error.message 
             })            
         }
     }
